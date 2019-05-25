@@ -10,7 +10,6 @@ class App extends React.Component {
     const response = await youtube.get('/search', { params: { q: value } });
 
     this.setState({ videos: response.data.items });
-    console.log(this.state.videos[0].snippet.title);
   }
 
   render() {
