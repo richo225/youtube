@@ -5,6 +5,7 @@ export default axios.create({
   responseType: 'json',
   params: {
     part: 'snippet',
+    type: 'video',
     maxResults: 5,
     key: 'AIzaSyD603KxaNVZJMmlXKVxKNX48ShkoWk8aZg'
   }
