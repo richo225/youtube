@@ -10,7 +10,10 @@ class App extends React.Component {
   handleSubmittedValue = async (value) => {
     const response = await youtube.get('/search', { params: { q: value } });
 
-    this.setState({ videos: response.data.items });
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+     });
   }
 
   handleSelectedVideo = (video) => {
